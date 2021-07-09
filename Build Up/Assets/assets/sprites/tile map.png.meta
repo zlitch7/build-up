@@ -14,6 +14,9 @@ TextureImporter:
   - first:
       213: -3816413983732110097
     second: tile map_3
+  - first:
+      213: 4912975407624933574
+    second: tile map_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -194,6 +197,27 @@ TextureImporter:
       bones: []
       spriteID: fec60d7b3bf590bc0800000000000000
       internalID: -3816413983732110097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile map_4
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0d6b96a156e2440800000000000000
+      internalID: 4912975407624933574
       vertices: []
       indices: 
       edges: []
