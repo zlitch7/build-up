@@ -15,6 +15,7 @@ public class blockPlacement : MonoBehaviour
 
     void Start()
     {
+        
         mainMap =  GameObject.Find("Main").GetComponent<Tilemap>();
         HighlightBlockMap =  GameObject.Find("HighlightMap").GetComponent<Tilemap>();
     }
