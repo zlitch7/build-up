@@ -7,9 +7,12 @@ public class GameManager : MonoBehaviour
     
     public GameObject Shop;
 
+    public bool Pause = false;
+
     void Start()
     {
         Shop.SetActive(false);
+     
     }
 
     // Update is called once per frame
@@ -21,10 +24,12 @@ public class GameManager : MonoBehaviour
     public void ShopButton(){
 
          Shop.SetActive(true);
+         Pause = true;
 
     }
 
     public void closeButton(){
         Shop.SetActive(false);
+        Pause = false;
     }
 }

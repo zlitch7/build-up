@@ -24,22 +24,30 @@ public class PlayerController : MonoBehaviour
     private Vector2 workSpace;
     private Vector2 currentVelocity;
     
+     GameManager gameManager;
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+         gameManager = GameObject.Find("game manager").GetComponent<GameManager>();
     }
 
     void Update()
     {
-        getInput();
-        jump();
+        if(gameManager.Pause == false){
+
+           getInput();
+           jump();
+
+        }
+
         isGrounded = CheckIfGrounded();
     }
 
     void FixedUpdate(){
         
+      if(gameManager.Pause == false){
          rb.velocity = new Vector2( horizontalInput * speed , rb.velocity.y);
         
          if(facingRight == false && horizontalInput > 0){
@@ -48,6 +56,7 @@ public class PlayerController : MonoBehaviour
          else if(facingRight == true && horizontalInput < 0){
              Flip();
          }
+      }
     }
 
     public void getInput(){

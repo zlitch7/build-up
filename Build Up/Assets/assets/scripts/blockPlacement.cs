@@ -16,6 +16,7 @@ public class blockPlacement : MonoBehaviour
     private Transform DropTransform;
 
     PlayerInventory playerInventory;
+    GameManager gameManager;
 
      Vector3Int previousTile;
 
@@ -27,6 +28,7 @@ public class blockPlacement : MonoBehaviour
     void Start()
     {
         playerInventory = GameObject.Find("Player").GetComponent<PlayerInventory>();
+        gameManager = GameObject.Find("game manager").GetComponent<GameManager>();
         mainMap =  GameObject.Find("Main").GetComponent<Tilemap>();
         HighlightBlockMap =  GameObject.Find("HighlightMap").GetComponent<Tilemap>();
     }
@@ -34,13 +36,18 @@ public class blockPlacement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HighlightBlock();
+        if(gameManager.Pause == false){
 
-        if(playerInventory.blockCount > 0){
-             place();
+            HighlightBlock();
+
+            if(playerInventory.blockCount > 0){
+                place();
             // playerInventory.blockCount -= 1;
+            }
+            
+            Destory();
         }
-        Destory();
+       
     }
 
     public void HighlightBlock(){
