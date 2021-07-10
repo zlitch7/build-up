@@ -6,12 +6,20 @@ public class Blocks : MonoBehaviour
 {
 
     public PlayerInventory playerInventory;
+    Rigidbody2D BlockRb;
 
-    public Collider2D col2D;
+    public float minForce = 1;
+    public float MaxForce = 5;
+
+    
 
     void Start()
     {
+        float randomForce = Random.Range(minForce , MaxForce);
+
+        BlockRb = GetComponent<Rigidbody2D>();
         playerInventory = GameObject.Find("Player").GetComponent<PlayerInventory>();
+        BlockRb.AddForce( new Vector2 (randomForce ,0), ForceMode2D.Impulse);
     }
 
     void Update()
