@@ -21,6 +21,8 @@ public class blockPlacement : MonoBehaviour
 
     public BoxCollider2D Outcol2D;
     public BoxCollider2D Incol2D;
+    public BoxCollider2D Bigcol2D;
+    public BoxCollider2D MechineCol2D;
 
     void Start()
     {
@@ -38,9 +40,6 @@ public class blockPlacement : MonoBehaviour
              place();
             // playerInventory.blockCount -= 1;
         }
-       
-        
-
         Destory();
     }
 
@@ -59,6 +58,7 @@ public class blockPlacement : MonoBehaviour
 
     }
 
+  
     public void place(){
 
        // Vector3 point  = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -66,11 +66,14 @@ public class blockPlacement : MonoBehaviour
         if(Input.GetMouseButtonDown(0)){
 
          Vector3 point  = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-          
-          if(Outcol2D.OverlapPoint(point) && !Incol2D.OverlapPoint(point)){
-              Debug.Log("doing");
 
-                Vector3Int selectedTile = mainMap.WorldToCell(point);
+         bool canPlace =  !Incol2D.OverlapPoint(point) && !MechineCol2D.OverlapPoint(point);
+          
+          if(Outcol2D.OverlapPoint(point) && canPlace ){
+              //Debug.Log("doing");
+               if(Bigcol2D.OverlapPoint(point)){
+
+                   Vector3Int selectedTile = mainMap.WorldToCell(point);
 
                 if(mainMap.HasTile(selectedTile)){
                     Debug.Log("already has a block");
@@ -80,6 +83,12 @@ public class blockPlacement : MonoBehaviour
                     playerInventory.blockCount -= 1;
                     playerInventory.blockCountText.text  = playerInventory.blockCount.ToString();
                 }
+
+               }
+               else{
+                   Debug.Log("outsideBigBox");
+               }
+               
           }
           else{
               Debug.Log("not doing");
