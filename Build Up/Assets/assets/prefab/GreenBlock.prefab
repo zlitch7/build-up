@@ -124,8 +124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 0}
-  minForce: 1
-  MaxForce: 4
+  minForce: 0
+  MaxForce: 2
 --- !u!50 &634701106254942309
 Rigidbody2D:
   serializedVersion: 4

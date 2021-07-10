@@ -9,7 +9,7 @@ public class Blocks : MonoBehaviour
     Rigidbody2D BlockRb;
 
     public float minForce = 1;
-    public float MaxForce = 5;
+    public float MaxForce = 3;
 
     
 
