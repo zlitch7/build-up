@@ -86,12 +86,12 @@ public class blockPlacement : MonoBehaviour
 
                }
                else{
-                   Debug.Log("outsideBigBox");
+                  // Debug.Log("outsideBigBox");
                }
                
           }
           else{
-              Debug.Log("not doing");
+              //Debug.Log("not doing");
           }
         
         }       
