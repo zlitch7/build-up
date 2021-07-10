@@ -12,7 +12,7 @@ public class mechine : MonoBehaviour
 
     void Start()
     {
-      //  Instantiate(yellowBlock , SpwanPos.transform.position , transform.rotation);
+        Instantiate(yellowBlock , new Vector3(SpwanPos.transform.position.x , SpwanPos.transform.position.y, -4) , transform.rotation);
         StartCoroutine(ThrowBlocks());
     }
 

@@ -1090,6 +1090,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockCountText: {fileID: 1980080454}
   blockCount: 0
+  canPick: 1
+  InventorySpace: 3
 --- !u!1 &1070308862
 GameObject:
   m_ObjectHideFlags: 0

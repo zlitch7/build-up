@@ -28,7 +28,7 @@ public class Blocks : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D other){
-        if(other.gameObject.CompareTag("Player")){
+        if(other.gameObject.CompareTag("Player") && playerInventory.canPick == true ){
            Destroy(gameObject);
            playerInventory.blockCount += 1;
            playerInventory.blockCountText.text  = playerInventory.blockCount.ToString();
