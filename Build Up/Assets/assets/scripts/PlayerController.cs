@@ -39,8 +39,9 @@ public class PlayerController : MonoBehaviour
     }
 
     void FixedUpdate(){
-
-         Movement();
+        
+         rb.velocity = new Vector2( horizontalInput * speed , rb.velocity.y);
+        
          if(facingRight == false && horizontalInput > 0){
              Flip();
          }
@@ -54,11 +55,6 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
     }
 
-    public void Movement(){
-
-      rb.velocity = new Vector2( horizontalInput * speed , rb.velocity.y);
-
-    }
 
     public void jump(){
         
