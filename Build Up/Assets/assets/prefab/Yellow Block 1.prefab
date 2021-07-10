@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 634701106254942310}
   - component: {fileID: 634701106254942311}
   - component: {fileID: 634701106254942309}
-  m_Layer: 6
-  m_Name: Yellow Block
+  m_Layer: 0
+  m_Name: Yellow Block 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
