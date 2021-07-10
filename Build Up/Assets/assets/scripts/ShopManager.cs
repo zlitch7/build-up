@@ -6,15 +6,21 @@ public class ShopManager : MonoBehaviour
 {
     public PlayerInventory playerInventory;
     public PlayerController playerController;
+    public mechine dropMechine;
     public GameObject SpeedLevel1 ,SpeedLevel2, SpeedLevel3,  SpeedLevel4;
     public GameObject JumpLevel1, JumpLevel2, JumpLevel3, JumpLevel4;
+    public GameObject DropSpeedLevel1 , DropSpeedLevel2 ,DropSpeedLevel3, DropSpeedLevel4;
+    public GameObject InventoryLevel1, InventoryLevel2, InventoryLevel3, InventoryLevel4;
     private bool bsl1 = false , bsl2 = false , bsl3 = false, bls4 = false;
     private bool bjl1 = false, bjl2 = false, bjl3 = false, bjl4  = false;
+    private bool bdsl1 = false, bdsl2 = false, bdsl3 = false, bdsl4 = false;
+    private bool bil1 = false, bil2 = false, bil3 = false, bil4 = false;
 
     void Start()
     {
         playerInventory = GameObject.Find("Player").GetComponent<PlayerInventory>();
         playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+        dropMechine = GameObject.Find("spwan pos").GetComponent<mechine>();
         
         SpeedLevel2.SetActive(false);
         SpeedLevel3.SetActive(false);
@@ -23,6 +29,15 @@ public class ShopManager : MonoBehaviour
         JumpLevel2.SetActive(false);
         JumpLevel3.SetActive(false);
         JumpLevel4.SetActive(false);
+
+        DropSpeedLevel2.SetActive(false);
+        DropSpeedLevel3.SetActive(false);
+        DropSpeedLevel4.SetActive(false);
+
+        InventoryLevel2.SetActive(false);
+        InventoryLevel3.SetActive(false);
+        InventoryLevel4.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -122,5 +137,94 @@ public class ShopManager : MonoBehaviour
     } 
 
 #endregion    
+
+#region  DropSpeed
+    public void level1DropSpeed(){
+        if(playerInventory.stars >= 1 && bdsl1 == false){
+             DropSpeedLevel2.SetActive(true);
+             bdsl1 = true;
+             dropMechine.DropSpeed -= 2;
+             playerInventory.stars -= 1;
+             playerInventory.StarText.text  = playerInventory.stars.ToString();
+        }
+
+    } 
+
+     public void level2DropSpeed(){
+        if(playerInventory.stars >= 2 && bdsl2 == false){
+             DropSpeedLevel3.SetActive(true);
+             bdsl2 = true;
+             dropMechine.DropSpeed -= 1;
+             playerInventory.stars -= 2;
+             playerInventory.StarText.text  = playerInventory.stars.ToString();
+        }
+
+    } 
+
+     public void level3DropSpeed(){
+        if(playerInventory.stars >= 3 && bdsl3 == false){
+             DropSpeedLevel4.SetActive(true);
+             bdsl3 = true;
+             dropMechine.DropSpeed -= 1;
+             playerInventory.stars -= 3;
+             playerInventory.StarText.text  = playerInventory.stars.ToString();
+        }
+
+    } 
+
+    public void level4DropSpeed(){
+        if(playerInventory.stars >= 4 && bdsl4 == false){
+             bdsl4 = true;
+             dropMechine.DropSpeed -= 1;
+             playerInventory.stars -= 4;
+             playerInventory.StarText.text  = playerInventory.stars.ToString();
+        }
+
+    } 
+
+#endregion    
+
+#region Inventory
+
+        public void level1Inventory(){
+            if(playerInventory.stars >= 1 && bil1 == false){
+                InventoryLevel2.SetActive(true);
+                bil1 = true;
+                playerInventory.InventorySpace += 2;
+                playerInventory.stars -= 1;
+                playerInventory.StarText.text  = playerInventory.stars.ToString();
+            }
+        } 
+
+        public void level2Inventory(){
+            if(playerInventory.stars >= 2 && bil2 == false){
+                InventoryLevel3.SetActive(true);
+                bil2 = true;
+                playerInventory.InventorySpace += 1;
+                playerInventory.stars -= 2;
+                playerInventory.StarText.text  = playerInventory.stars.ToString();
+            }
+        }
+
+         public void level3Inventory(){
+            if(playerInventory.stars >= 3 && bil3 == false){
+                InventoryLevel4.SetActive(true);
+                bil3 = true;
+                playerInventory.InventorySpace += 1;
+                playerInventory.stars -= 3;
+                playerInventory.StarText.text  = playerInventory.stars.ToString();
+            }
+        }
+
+         public void level4Inventory(){
+            if(playerInventory.stars >= 4 && bil4 == false){
+                bil4 = true;
+                playerInventory.InventorySpace += 1;
+                playerInventory.stars -= 4;
+                playerInventory.StarText.text  = playerInventory.stars.ToString();
+            }
+        }
+
+#endregion        
 
 }

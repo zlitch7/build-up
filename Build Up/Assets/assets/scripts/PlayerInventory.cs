@@ -11,7 +11,7 @@ public class PlayerInventory : MonoBehaviour
     public int blockCount;
     public int stars;
     public bool canPick = true;
-    public float InventorySpace;
+    public float InventorySpace = 3;
 
     void Start()
     {

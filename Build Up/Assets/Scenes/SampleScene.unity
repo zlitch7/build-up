@@ -290,6 +290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 0}
   playerController: {fileID: 0}
+  dropMechine: {fileID: 0}
   SpeedLevel1: {fileID: 1696872205}
   SpeedLevel2: {fileID: 1071252824}
   SpeedLevel3: {fileID: 569834866}
@@ -298,6 +299,14 @@ MonoBehaviour:
   JumpLevel2: {fileID: 1586720537}
   JumpLevel3: {fileID: 1870137130}
   JumpLevel4: {fileID: 1427994641}
+  DropSpeedLevel1: {fileID: 1752902981}
+  DropSpeedLevel2: {fileID: 225438388}
+  DropSpeedLevel3: {fileID: 480257944}
+  DropSpeedLevel4: {fileID: 1596602124}
+  InventoryLevel1: {fileID: 93830165}
+  InventoryLevel2: {fileID: 1321609050}
+  InventoryLevel3: {fileID: 1544271479}
+  InventoryLevel4: {fileID: 64598806}
 --- !u!4 &28569854
 Transform:
   m_ObjectHideFlags: 0
@@ -530,7 +539,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 64598809}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 28569853}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: level4Inventory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &64598809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -785,7 +806,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 93830168}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 28569853}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: level1Inventory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &93830168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1092,7 +1125,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 225438391}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 28569853}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: level2DropSpeed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &225438391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1741,7 +1786,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 480257947}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 28569853}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: level3DropSpeed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &480257947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4786,7 +4843,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1321609053}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 28569853}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: level2Inventory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1321609053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5810,7 +5879,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1544271482}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 28569853}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: level3Inventory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1544271482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6197,7 +6278,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1596602127}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 28569853}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: level4DropSpeed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1596602127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7315,7 +7408,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1752902984}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 28569853}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: level1DropSpeed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1752902984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7751,6 +7856,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yellowBlock: {fileID: 634701106254942306, guid: 1741b72ed3295f44095e272506191479, type: 3}
   SpwanPos: {fileID: 1865071044}
+  DropSpeed: 7
 --- !u!1 &1870137130
 GameObject:
   m_ObjectHideFlags: 0
