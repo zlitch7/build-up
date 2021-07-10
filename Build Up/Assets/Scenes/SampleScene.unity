@@ -3790,9 +3790,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8235dd6d76bbf0e43bf20eab9a5cfba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Block: {fileID: 11400000, guid: 6f5fb673ea9e93042bf7a6848d37af28, type: 2}
+  YellowBlockTile: {fileID: 0}
   hlBlock: {fileID: 11400000, guid: 1028b42310affdf43b0ce600d63e056e, type: 2}
-  YellowBlock: {fileID: 634701106254942306, guid: 1741b72ed3295f44095e272506191479, type: 3}
+  Blocks:
+  - {fileID: 11400000, guid: 089764608bc8b4c40b2305a5ab02a8cd, type: 2}
+  - {fileID: 11400000, guid: ac27fdf26fcabc4419e55d57a2e7f57a, type: 2}
+  - {fileID: 11400000, guid: 4582a040437968e4da2bd08e4abca8c7, type: 2}
+  - {fileID: 11400000, guid: b4801177184f3ae498373c15b2f5c1da, type: 2}
+  ItemBlock:
+  - {fileID: 634701106254942306, guid: 1741b72ed3295f44095e272506191479, type: 3}
+  - {fileID: 634701106254942306, guid: ed5badb7018e1f0469273b3cebe96648, type: 3}
+  - {fileID: 634701106254942306, guid: 7ecd09eefeca3204e8e77ab11d1dc5c5, type: 3}
+  - {fileID: 634701106254942306, guid: 1723e8d3609d60f448cbf6ce94bc7aad, type: 3}
   Outcol2D: {fileID: 1769251060}
   Incol2D: {fileID: 2116633958}
   Bigcol2D: {fileID: 1070308863}
@@ -7854,7 +7863,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a9b4e9112faf4146ba4b86a540497a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yellowBlock: {fileID: 634701106254942306, guid: 1741b72ed3295f44095e272506191479, type: 3}
+  Blocks:
+  - {fileID: 634701106254942306, guid: 1741b72ed3295f44095e272506191479, type: 3}
+  - {fileID: 634701106254942306, guid: 1723e8d3609d60f448cbf6ce94bc7aad, type: 3}
+  - {fileID: 634701106254942306, guid: 7ecd09eefeca3204e8e77ab11d1dc5c5, type: 3}
+  - {fileID: 634701106254942306, guid: ed5badb7018e1f0469273b3cebe96648, type: 3}
   SpwanPos: {fileID: 1865071044}
   DropSpeed: 7
 --- !u!1 &1870137130

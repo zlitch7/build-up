@@ -5,19 +5,20 @@ using UnityEngine;
 public class mechine : MonoBehaviour
 {
     
-    public GameObject yellowBlock;
+    public GameObject[] Blocks;
 
     public GameObject SpwanPos;
 
-    public float DropSpeed = 7;
+    public float DropSpeed = 8;
 
     GameManager gameManager;
 
 
     void Start()
     {
+        int randomBlocks = Random.Range(0, Blocks.Length);
         gameManager = GameObject.Find("game manager").GetComponent<GameManager>();
-        Instantiate(yellowBlock , new Vector3(SpwanPos.transform.position.x , SpwanPos.transform.position.y, -4) , transform.rotation);
+        Instantiate(Blocks[randomBlocks] , new Vector3(SpwanPos.transform.position.x , SpwanPos.transform.position.y, -4) , transform.rotation);
         StartCoroutine(ThrowBlocks());
     }
 
@@ -29,8 +30,9 @@ public class mechine : MonoBehaviour
 
     IEnumerator ThrowBlocks(){
         yield return new WaitForSeconds(DropSpeed);
+        int randomBlocks = Random.Range(0, Blocks.Length);
         if(gameManager.Pause == false){
-                Instantiate(yellowBlock , new Vector3(SpwanPos.transform.position.x , SpwanPos.transform.position.y, -4) , transform.rotation);
+                Instantiate(Blocks[randomBlocks] , new Vector3(SpwanPos.transform.position.x , SpwanPos.transform.position.y, -4) , transform.rotation);
         }      
         StartCoroutine(ThrowBlocks());
         

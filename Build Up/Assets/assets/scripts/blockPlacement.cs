@@ -8,10 +8,12 @@ public class blockPlacement : MonoBehaviour
     
     Tilemap mainMap;
     Tilemap HighlightBlockMap;
-    public Tile Block;
+    public Tile YellowBlockTile;
     public Tile hlBlock;
 
-    public GameObject YellowBlock;
+    public Tile[] Blocks;
+
+    public GameObject[] ItemBlock;
 
     private Transform DropTransform;
 
@@ -75,6 +77,8 @@ public class blockPlacement : MonoBehaviour
          Vector3 point  = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
          bool canPlace =  !Incol2D.OverlapPoint(point) && !MechineCol2D.OverlapPoint(point);
+
+         int randomBlock = Random.Range(0 , Blocks.Length);
           
           if(Outcol2D.OverlapPoint(point) && canPlace ){
               //Debug.Log("doing");
@@ -86,7 +90,7 @@ public class blockPlacement : MonoBehaviour
                     Debug.Log("already has a block");
                 }
                 else{
-                    mainMap.SetTile(selectedTile , Block );
+                    mainMap.SetTile(selectedTile , Blocks[randomBlock]);
                     playerInventory.blockCount -= 1;
                     playerInventory.blockCountText.text  = playerInventory.blockCount.ToString();
                 }
@@ -110,9 +114,10 @@ public class blockPlacement : MonoBehaviour
           
         if(Input.GetMouseButtonDown(1)){           
             Vector3Int selectedTile = mainMap.WorldToCell(point);
+            int randomItemBlock = Random.Range(0, ItemBlock.Length);
             if(mainMap.HasTile(selectedTile)){
                 mainMap.SetTile(selectedTile , null );
-                Instantiate(YellowBlock , new Vector3( point.x , point.y , -4), transform.rotation);
+                Instantiate(ItemBlock[randomItemBlock] , new Vector3( point.x , point.y , -4), transform.rotation);
             }
            
         }
