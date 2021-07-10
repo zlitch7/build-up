@@ -2147,7 +2147,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.109336056, g: 0.114510395, b: 0.122641504, a: 0}
+  m_BackGroundColor: {r: 0.2264151, g: 0.20288412, b: 0.19117124, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -3794,9 +3794,9 @@ MonoBehaviour:
   hlBlock: {fileID: 11400000, guid: 1028b42310affdf43b0ce600d63e056e, type: 2}
   Blocks:
   - {fileID: 11400000, guid: 089764608bc8b4c40b2305a5ab02a8cd, type: 2}
-  - {fileID: 11400000, guid: ac27fdf26fcabc4419e55d57a2e7f57a, type: 2}
-  - {fileID: 11400000, guid: 4582a040437968e4da2bd08e4abca8c7, type: 2}
   - {fileID: 11400000, guid: b4801177184f3ae498373c15b2f5c1da, type: 2}
+  - {fileID: 11400000, guid: 955e3ef658c29ad439731b959964e4ad, type: 2}
+  - {fileID: 11400000, guid: 4582a040437968e4da2bd08e4abca8c7, type: 2}
   ItemBlock:
   - {fileID: 634701106254942306, guid: 1741b72ed3295f44095e272506191479, type: 3}
   - {fileID: 634701106254942306, guid: ed5badb7018e1f0469273b3cebe96648, type: 3}
