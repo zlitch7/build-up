@@ -42,6 +42,10 @@ public class PlayerController : MonoBehaviour
 
         }
 
+        if(gameManager.Pause == true){
+            rb.velocity = new Vector2(0, 0);
+        }
+
         isGrounded = CheckIfGrounded();
     }
 

@@ -52,7 +52,7 @@ public class ShopManager : MonoBehaviour
         if(playerInventory.stars >= 1 && bsl1 == false){
              SpeedLevel2.SetActive(true);
              bsl1 = true;
-             playerController.speed += 1;
+             playerController.speed += 0.5f;
              playerInventory.stars -= 1;
              playerInventory.StarText.text  = playerInventory.stars.ToString();
         }
@@ -63,7 +63,7 @@ public class ShopManager : MonoBehaviour
         if(playerInventory.stars >= 2 && bsl2 == false){
              SpeedLevel3.SetActive(true);
              bsl2 = true;
-             playerController.speed += 1;
+             playerController.speed += 0.5f;
              playerInventory.stars -= 2;
              playerInventory.StarText.text  = playerInventory.stars.ToString();
         }
@@ -74,7 +74,7 @@ public class ShopManager : MonoBehaviour
         if(playerInventory.stars >= 3 && bsl3 == false){
              SpeedLevel4.SetActive(true);
              bsl3 = true;
-             playerController.speed += 1;
+             playerController.speed += 0.5f;
              playerInventory.stars -= 3;
              playerInventory.StarText.text  = playerInventory.stars.ToString();
         }
@@ -84,7 +84,7 @@ public class ShopManager : MonoBehaviour
      public void level4Speed(){
         if(playerInventory.stars >= 4 && bls4 == false){
              bls4 = true;
-             playerController.speed += 1;
+             playerController.speed += 0.5f;
              playerInventory.stars -= 4;
              playerInventory.StarText.text  = playerInventory.stars.ToString();
         }

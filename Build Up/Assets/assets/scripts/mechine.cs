@@ -31,9 +31,9 @@ public class mechine : MonoBehaviour
     IEnumerator ThrowBlocks(){
         yield return new WaitForSeconds(DropSpeed);
         int randomBlocks = Random.Range(0, Blocks.Length);
-        if(gameManager.Pause == false){
+       // if(gameManager.Pause == false){
                 Instantiate(Blocks[randomBlocks] , new Vector3(SpwanPos.transform.position.x , SpwanPos.transform.position.y, -4) , transform.rotation);
-        }      
+     //   }      
         StartCoroutine(ThrowBlocks());
         
     }
