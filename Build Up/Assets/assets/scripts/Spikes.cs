@@ -27,6 +27,7 @@ public class Spikes : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("game manager").GetComponent<GameManager>();
+        TimerText = GameObject.Find("timer").GetComponent<TextMeshProUGUI>();
         cam = GameObject.Find("Main Camera").GetComponent<Camera>();
         GameOver.SetActive(false);
         RedScreen.SetActive(false);
