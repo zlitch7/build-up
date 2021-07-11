@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     // Start is called before the first frame update
-
+     public GameObject BlackScreen;
     public GameObject modeSelector;
     public GameObject Play;
     void Start()
     {
+        BlackScreen.SetActive(false);
         modeSelector.SetActive(false);
         Play.SetActive(true);
     }
@@ -22,8 +23,14 @@ public class MainMenu : MonoBehaviour
     }
 
     public void ModeSelector(){
-         SceneManager.LoadScene(1);
+        BlackScreen.SetActive(true);
+        StartCoroutine(PlayScene());
 
+    }
+
+    IEnumerator PlayScene(){
+        yield return new WaitForSeconds(2);
+         SceneManager.LoadScene(3);
     }
 
     public void Back(){
