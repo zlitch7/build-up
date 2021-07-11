@@ -22,7 +22,7 @@ public class MainMenu : MonoBehaviour
     }
 
     public void ModeSelector(){
-         SceneManager.LoadScene(1);
+         SceneManager.LoadScene(3);
 
     }
 
