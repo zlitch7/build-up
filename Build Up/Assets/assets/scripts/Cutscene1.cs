@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Cutscene1 : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
+   
     void Start()
-    {
+    {     
         StartCoroutine(HardLoadScene());
     }
 

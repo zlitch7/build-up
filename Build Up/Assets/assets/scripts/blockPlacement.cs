@@ -15,6 +15,8 @@ public class blockPlacement : MonoBehaviour
 
     public GameObject[] ItemBlock;
 
+    public GameObject NoBlocks;
+
     private Transform DropTransform;
 
     PlayerInventory playerInventory;
@@ -29,6 +31,7 @@ public class blockPlacement : MonoBehaviour
 
     void Start()
     {
+        NoBlocks.SetActive(false);
         playerInventory = GameObject.Find("Player").GetComponent<PlayerInventory>();
         gameManager = GameObject.Find("game manager").GetComponent<GameManager>();
         mainMap =  GameObject.Find("Main").GetComponent<Tilemap>();
@@ -43,8 +46,12 @@ public class blockPlacement : MonoBehaviour
             HighlightBlock();
 
             if(playerInventory.blockCount > 0){
+                NoBlocks.SetActive(false);
                 place();
             // playerInventory.blockCount -= 1;
+            }
+            if(playerInventory.blockCount <= 0 ){
+               NoBlocks.SetActive(true);
             }
             
             Destory();

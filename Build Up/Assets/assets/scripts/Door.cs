@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
+    public GameObject BlackScreen;
+
     void Start()
     {
-        
+        BlackScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -19,9 +21,14 @@ public class Door : MonoBehaviour
 
       void OnTriggerEnter2D(Collider2D col){
         if(col.gameObject.CompareTag("Player")){
-           // gameManager.Pause = true;
             Debug.Log("game over");
-           // GameOver.SetActive(true);
+            BlackScreen.SetActive(true);
+            StartCoroutine(EndScene());
         }
+    }
+
+    IEnumerator EndScene(){
+      yield return new WaitForSeconds(2);
+      SceneManager.LoadScene(4);     
     }
 }
