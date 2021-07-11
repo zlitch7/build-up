@@ -54,12 +54,12 @@ public class PlayerController : MonoBehaviour
       if(gameManager.Pause == false){
          rb.velocity = new Vector2( horizontalInput * speed , rb.velocity.y);
         
-         if(facingRight == false && horizontalInput > 0){
-             Flip();
-         }
-         else if(facingRight == true && horizontalInput < 0){
-             Flip();
-         }
+        // if(facingRight == false && horizontalInput > 0){
+          //   Flip();
+        // }
+       //  else if(facingRight == true && horizontalInput < 0){
+           //  Flip();
+       //  }
       }
     }
 

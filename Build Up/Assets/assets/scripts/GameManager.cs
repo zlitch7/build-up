@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -32,4 +33,13 @@ public class GameManager : MonoBehaviour
         Shop.SetActive(false);
         Pause = false;
     }
+ 
+    public void Retry(){
+        SceneManager.LoadScene(1);
+    }
+
+    public void EasyMode(){
+        SceneManager.LoadScene(2);
+    }
+
 }
