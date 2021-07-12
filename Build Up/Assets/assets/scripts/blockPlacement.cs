@@ -6,6 +6,10 @@ using UnityEngine.Tilemaps;
 public class blockPlacement : MonoBehaviour
 {
     
+    AudioSource audioSource;
+    public AudioClip pop;
+    public AudioClip Tick;
+
     Tilemap mainMap;
     Tilemap HighlightBlockMap;
     public Tile YellowBlockTile;
@@ -31,6 +35,7 @@ public class blockPlacement : MonoBehaviour
 
     void Start()
     {
+        audioSource = GameObject.Find("Main Camera").GetComponent<AudioSource>();
         NoBlocks.SetActive(false);
         playerInventory = GameObject.Find("Player").GetComponent<PlayerInventory>();
         gameManager = GameObject.Find("game manager").GetComponent<GameManager>();
@@ -97,6 +102,7 @@ public class blockPlacement : MonoBehaviour
                     Debug.Log("already has a block");
                 }
                 else{
+                    audioSource.PlayOneShot(Tick , 1);
                     mainMap.SetTile(selectedTile , Blocks[randomBlock]);
                     playerInventory.blockCount -= 1;
                     playerInventory.blockCountText.text  = playerInventory.blockCount.ToString();
@@ -123,6 +129,7 @@ public class blockPlacement : MonoBehaviour
             Vector3Int selectedTile = mainMap.WorldToCell(point);
             int randomItemBlock = Random.Range(0, ItemBlock.Length);
             if(mainMap.HasTile(selectedTile)){
+                audioSource.PlayOneShot(pop , 1);
                 mainMap.SetTile(selectedTile , null );
                 Instantiate(ItemBlock[randomItemBlock] , new Vector3( point.x , point.y , -4), transform.rotation);
             }

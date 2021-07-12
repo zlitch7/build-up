@@ -176,6 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 0}
+  bell: {fileID: 8300000, guid: 9ef42afbedcc2424abc303f13d71bc45, type: 3}
 --- !u!50 &9004679632112852233
 Rigidbody2D:
   serializedVersion: 4

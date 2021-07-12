@@ -33,6 +33,10 @@ public class MainMenu : MonoBehaviour
          SceneManager.LoadScene(3);
     }
 
+    public void GameQuit(){
+        Application.Quit();
+    }
+
     public void Back(){
          modeSelector.SetActive(false);
         Play.SetActive(true);
