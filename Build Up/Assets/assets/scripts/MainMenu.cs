@@ -6,14 +6,18 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    AudioSource theme;
      public GameObject BlackScreen;
     public GameObject modeSelector;
     public GameObject Play;
     void Start()
     {
+        theme = GameObject.Find("Main Camera").GetComponent<AudioSource>();
         BlackScreen.SetActive(false);
         modeSelector.SetActive(false);
         Play.SetActive(true);
+        theme.Play();
     }
 
     // Update is called once per frame

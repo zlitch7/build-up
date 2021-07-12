@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     
+    public AudioSource theme;
+
     public GameObject Shop;
     public GameObject Tutorial;
     public GameObject Tutorial2;
@@ -14,10 +16,12 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        theme = GameObject.Find("Player").GetComponent<AudioSource>();
         Tutorial.SetActive(true);
         Tutorial2.SetActive(false);
         StartCoroutine(StopTutorial());
         Shop.SetActive(false);
+        theme.Play();
      
     }
 
@@ -25,6 +29,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void LoadMainMenu(){
+        SceneManager.LoadScene(0);
     }
 
     IEnumerator StopTutorial(){
